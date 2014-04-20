@@ -1,8 +1,13 @@
 
--- How I grab integers from the user in Haskell.
 module Input where
 
 import Data.Maybe (listToMaybe)
+
+main :: IO()
+main = do
+	n <- grab
+	putStr "You entered: "
+	putStrLn (show n)
 
 -- function for verifying user input: http://stackoverflow.com/questions/2931557/haskell-check-for-user-input-errors
 maybeRead :: Read a => String -> Maybe a
